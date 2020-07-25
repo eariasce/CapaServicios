@@ -1,34 +1,21 @@
 package com.everis.base.steps;
 
-import com.everis.base.models.Book;
-import com.everis.base.models.Data;
-import com.google.gson.JsonElement;
+import com.everis.base.models.*;
 import com.google.gson.JsonObject;
 import io.cucumber.java.Before;
 import io.restassured.RestAssured;
-import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.builder.ResponseSpecBuilder;
+import io.restassured.builder.*;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
-import io.restassured.specification.ResponseSpecification;
+import io.restassured.specification.*;
 import net.thucydides.core.annotations.Step;
-import org.apache.commons.io.IOUtils;
+
 import org.hamcrest.CoreMatchers;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.core.io.ClassPathResource;
+import org.slf4j.*;
 
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.util.List;
-import java.util.regex.Pattern;
-
-import static net.serenitybdd.rest.SerenityRest.given;
-import static net.serenitybdd.rest.SerenityRest.lastResponse;
+import static net.serenitybdd.rest.SerenityRest.*;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.Matchers.equalTo;
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 
 public class NetflixSteps {
@@ -60,12 +47,12 @@ public class NetflixSteps {
     }
 
     @Step("obtiene lista de usuarios")
-    public void listUser(int page) {
+    public void listUser(int NUMERO) {
 
         given().
                 log().all().
                 spec(requestSpec).
-                queryParam("page", page).
+                queryParam("page", NUMERO).
          when().
                 get("users").
          then().

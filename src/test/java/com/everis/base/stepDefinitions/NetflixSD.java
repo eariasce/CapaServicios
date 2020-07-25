@@ -6,10 +6,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Steps;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
-import static net.serenitybdd.rest.SerenityRest.restAssuredThat;
 
 /**
  * @author jovallep
@@ -23,10 +20,7 @@ public class NetflixSD {
     public void queLaAplicacionEstaOperativa() {
     }
 
-    @When("obtiene la lista: {int} de clientes suscritos")
-    public void obtieneLaListaDeClientesSuscritos(int i) {
-        netflix.listUser(i);
-    }
+
 
     @When("obtiene al cliente: {int} suscrito")
     public void obtieneAlClienteSuscrito(int user) {
@@ -94,5 +88,10 @@ public class NetflixSD {
     @And("inicializo request en post")
     public void agregoParametrosDeRequestEnPost() {
         netflix.inicializoParametrosRequestPost();
+    }
+
+    @And("obtengo la pagina numero {int}")
+    public void obtengoLaPaginaNumero(int arg0) {
+        netflix.listUser(arg0);
     }
 }
