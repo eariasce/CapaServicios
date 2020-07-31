@@ -32,7 +32,7 @@ public class baseTest {
 
     @BeforeClass
     public static void messages() {
-        System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
+        //System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
         System.out.println(ANSI_GREEN + EVERIS_WELCOME + ANSI_GREEN);
     }
 

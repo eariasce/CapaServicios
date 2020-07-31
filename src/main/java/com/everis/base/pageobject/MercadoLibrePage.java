@@ -1,9 +1,9 @@
 package com.everis.base.pageobject;
 
+
 /**
  * @author jovallep
  */
-
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
@@ -12,6 +12,7 @@ import org.openqa.selenium.support.FindBy;
 @DefaultUrl("https://www.mercadolibre.com.pe/")
 public class MercadoLibrePage extends PageObject {
 
+    
     @FindBy(xpath = "/html/body/header/div/div[1]/nav[2]/a[1]")
     public WebElementFacade btnCrearCuenta;
 
