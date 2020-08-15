@@ -5,7 +5,7 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
-import org.openqa.selenium.chrome.ChromeDriverService;
+//import org.openqa.selenium.chrome.ChromeDriverService;
 
 /**
  * @author jovallep
