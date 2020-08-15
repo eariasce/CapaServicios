@@ -4,6 +4,10 @@ import com.everis.base.pageobject.CyberWowPage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
+
 public class CyberWowSteps {
     private static final Logger LOGGER = LoggerFactory.getLogger(ClaseDemoSteps.class);
 
@@ -44,6 +48,45 @@ public class CyberWowSteps {
         page.popupRegistro.waitUntilVisible();
         page.popupRegistro.click();
 
-        page.popupRegistro.waitUntilNotVisible();
+        //page.popupRegistro.waitUntilNotVisible();
+    }
+
+    public void seleccionoTiendaPlazaVea() {
+        page.imagenPlazaVea.waitUntilVisible();
+        page.imagenPlazaVea.click();
+    }
+
+    public void cambioVentana() {
+      //  ArrayList<String> tabspage = page.getDriver().getWindowHandles();
+       // page.getDriver().switchTo().window(tabspage.get());
+       // page.waitFor(6000);
+    }
+
+    public void seleccionoNoEnPopupNotificaciones() {
+        page.popupNo.waitUntilVisible();
+        page.popupNo.click();
+    }
+
+    public void realizoBusquedaEnPlazaVea(String texto) {
+        page.busquedaPlazaVea.waitUntilVisible();
+        page.busquedaPlazaVea.sendKeys(texto);
+    }
+
+    public void agregoAlCarrito() {
+        page.agregarAlCarrito.waitUntilVisible();
+        page.agregarAlCarrito.click();
+        page.metodoEntrega.click();
+        page.opciondosMetodoEntrega.click();
+        page.btnConfirmar.click();
+    }
+
+    public void hagoClickEnVerProducto() {
+        page.verProducto.waitUntilVisible();
+        page.verProducto.click();
+    }
+
+    public void cierroPopupDePlazaVea() {
+        page.cerrarModal.waitUntilVisible();
+        page.cerrarModal.click();
     }
 }

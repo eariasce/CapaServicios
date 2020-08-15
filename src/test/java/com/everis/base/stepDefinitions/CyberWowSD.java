@@ -47,4 +47,43 @@ public class CyberWowSD {
         cyberWowSteps.cierroPopupDeRegistro();
 
     }
+
+    @Then("selecciono tienda plazaVea")
+    public void seleccionoTiendaPlazaVea() {
+        cyberWowSteps.seleccionoTiendaPlazaVea();
+
+    }
+
+
+    @Then("cambio a la ventana dos")
+    public void cambioALaVentanaDos() {
+        cyberWowSteps.cambioVentana();
+    }
+
+    @And("selecciono no en popup notificaciones")
+    public void seleccionoNoEnPopupNotificaciones() {
+        cyberWowSteps.seleccionoNoEnPopupNotificaciones();
+    }
+
+    @And("realizo busqueda en plazaVea {string}")
+    public void realizoBusquedaEnPlazaVea(String texto) {
+        cyberWowSteps.realizoBusquedaEnPlazaVea(texto);
+    }
+
+    @And("cierro popup de plazaVea")
+    public void cierroPopupDePlazaVea() {
+        cyberWowSteps.cierroPopupDePlazaVea();
+    }
+
+    @And("hago click en ver producto")
+    public void hagoClickEnVerProducto() {
+        cyberWowSteps.hagoClickEnVerProducto();
+    }
+
+    @And("agrego al carrito")
+    public void agregoAlCarrito() {
+        cyberWowSteps.agregoAlCarrito();
+    }
+
+
 }

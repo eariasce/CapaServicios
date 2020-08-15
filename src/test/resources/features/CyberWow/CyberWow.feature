@@ -8,4 +8,12 @@ Feature: Registro Cyber Wow
     And escribe correo electronico "eariasce@everis.com" en el campo
     And acepta terminos y condiciones
     And presiona boton registro
-    Then cierro popup de registro
+    #Then cierro popup de registro
+    And selecciono tienda plazaVea
+    And cambio a la ventana dos
+    And selecciono no en popup notificaciones
+    And realizo busqueda en plazaVea "texto"
+    And cierro popup de plazaVea
+    And hago click en ver producto
+    And agrego al carrito
+
