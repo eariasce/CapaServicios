@@ -27,6 +27,7 @@ public class CyberWowPage extends PageObject {
     public WebElementFacade popupRegistro;
 
     @FindBy(xpath = "//a[@href=\"https://www.plazavea.com.pe/\"]")
+
     public WebElementFacade imagenPlazaVea;
 
     //Plaza Vea
@@ -48,10 +49,8 @@ public class CyberWowPage extends PageObject {
      @FindBy(xpath = "//*[@id=\"header-root\"]/header/div[2]/div/div[1]/div/div[1]/div[1]/select")
     public WebElementFacade metodoEntrega;
 
-
     @FindBy(xpath = "//*[@id=\"header-root\"]/header/div[2]/div/div[1]/div/div[1]/div[1]/select/option[3]")
     public WebElementFacade opciondosMetodoEntrega;
-
 
     @FindBy(xpath = "//*[@id=\"header-root\"]/header/div[2]/div/div[1]/div/div[2]/button")
     public WebElementFacade btnConfirmar;

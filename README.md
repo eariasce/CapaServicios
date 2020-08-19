@@ -1,7 +1,3 @@
-# CONTINUOUS TESTING
-
-Proyecto de equipo Testing QA y Autonatizadores QA
-
 ## Getting Started
 Con las siguientes instrucciones logrará el correcto
  funcionamiento del proyecto en su máquina local para fines de desarrollo y prueba.

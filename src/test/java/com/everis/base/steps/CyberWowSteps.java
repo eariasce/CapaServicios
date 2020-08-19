@@ -4,12 +4,12 @@ import com.everis.base.pageobject.CyberWowPage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.concurrent.TimeUnit;
+//import java.lang.reflect.Array;
+//import java.util.ArrayList;
+//import java.util.concurrent.TimeUnit;
 
 public class CyberWowSteps {
-    private static final Logger LOGGER = LoggerFactory.getLogger(ClaseDemoSteps.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(CyberWowSteps.class);
 
     private CyberWowPage page;
 
@@ -20,7 +20,9 @@ public class CyberWowSteps {
     }
 
     public void escriboNombre(String nombre) {
+        //Por si se demora en cargar
         page.txtNombre.waitUntilVisible();
+        //Enviar lo que se escribe
         page.txtNombre.sendKeys(nombre);
     }
 
@@ -48,7 +50,7 @@ public class CyberWowSteps {
         page.popupRegistro.waitUntilVisible();
         page.popupRegistro.click();
 
-        //page.popupRegistro.waitUntilNotVisible();
+        //page.popupRegistro.waitUntilNotVisible(); -> Espera hasta que no este visible
     }
 
     public void seleccionoTiendaPlazaVea() {
